@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
+    color: #333;
+}
+
+
+/* Screens */
+
+.screen {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* Opening Card */
+
+.card {
+    width: 90%;
+    max-width: 500px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    animation: appear 1s ease;
+}
+
+.small-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card h1 {
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.card h1 span {
+    color: #ff4f91;
+}
+
+.hint {
+    margin-top: 20px;
+    color: #777;
+}
+
+
+/* Buttons */
+
+button {
+    border: none;
+    cursor: pointer;
+
+    padding: 15px 25px;
+
+    margin-top: 25px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    background: #ff4f91;
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(255, 79, 145, 0.3);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+
+/* Birthday */
+
+.birthday-content {
+    text-align: center;
+
+    width: 90%;
+    max-width: 600px;
+
+    animation: zoomIn 1s ease;
+}
+
+.emoji {
+    font-size: 80px;
+
+    animation: bounce 1.5s infinite;
+}
+
+.birthday-content h1 {
+    font-size: 48px;
+    color: #ff4f91;
+}
+
+.birthday-content h2 {
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.message {
+    margin-top: 25px;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Final Message */
+
+.final-card {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.8);
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+    animation: appear 1s ease;
+}
+
+.final-card h1 {
+    color: #ff4f91;
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+}
+
+.final-card p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.final-card h2 {
+    margin-top: 25px;
+
+    color: #555;
+}
+
+.final-emoji {
+    font-size: 30px;
+
+    margin-top: 25px;
+}
+
+
+/* Stickers */
+
+.sticker {
+    position: fixed;
+
+    width: 100px;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.sticker1 {
+    top: 5%;
+    left: 5%;
+}
+
+.sticker2 {
+    top: 10%;
+    right: 5%;
+
+    animation-delay: 1s;
+}
+
+.sticker3 {
+    bottom: 8%;
+    left: 7%;
+
+    animation-delay: 2s;
+}
+
+.sticker4 {
+    bottom: 10%;
+    right: 7%;
+
+    animation-delay: 1.5s;
+}
+
+
+/* Music Button */
+
+.music-btn {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    z-index: 100;
+
+    font-size: 20px;
+}
+
+
+/* Hidden */
+
+.hidden {
+    display: none;
+}
+
+
+/* Animations */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes zoomIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .card h1 {
+        font-size: 30px;
+    }
+
+    .birthday-content h1 {
+        font-size: 38px;
+    }
+
+    .birthday-content h2 {
+        font-size: 32px;
+    }
+
+    .sticker {
+        width: 70px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+}
